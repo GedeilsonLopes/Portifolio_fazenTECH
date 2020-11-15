@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>FazenTECH</title>
+</head>
+<body>
+    
+    <header id="topo">
+        <img src="img/fazenTECH_logo.png" alt="FazenTECH">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#cadastro">CADASTRO</a></li>
+            <li><a href="#monitoramento">MONITORAMENTO</a></li>
+        </ul>
+    </nav>
+    <main>
+    
+        <div id="container">
+            <a  id='voltar' href="#topo">Voltar ao topo</a>
+            <div class="pagina" id="home">
+                <h1>Sistema de monitoramento de produção e doenças</h1>
+                <p id="introducao">
+                    Bem vindo a FazenTECH, seu sistema de gerenciamento de animais.
+                    Aqui você pode ter sempre em mãos o controle de produção de sua fazenda e também o registro de animais doentes.
+                </p>
+            </div>
+
+            <div class="pagina" id="cadastro">
+                <h1>Cadastro de animais</h1>
+                <form id="cadastro_animal">
+                    <label for="nome_animal">Nome do animal</label>
+                    <input type="text" id="nome_animal">
+
+                    <label for="id_animal">Número de Identificação</label>
+                    <input type="text" id="id_animal">
+
+                    <label for="producao">Produção diária</label>
+                    <input type="text" id="producao">
+
+                    <label for="funcionario">Responsável pela ordenha</label>
+                    <select name="funcionarios" id="funcionario">
+                        <option value="Manoel">Manoel</option>
+                        <option value="Juca">Juca</option>
+                        <option value="Jaime">Jaime</option>
+                    </select>
+
+                    <label for="hora_ordenha">Hora da ordenha</label>
+                    <input type="datetime-local" id="hora_ordenha">
+
+                    <button type="button" onclick="alert('Dados enviados com sucesso')">Enviar</button>
+                    <input type="reset">
+                </form>
+            </div>
+            <div class="pagina" id="monitoramento">
+                <h1>Monitoramento de animais doentes</h1>
+                <form id="tratamento_animal">
+                    <label for="nome_paciente">Nome do animal</label>
+                    <input type="text" id="nome_paciente">
+
+                    <label for="id_paciente">Número de Identificação</label>
+                    <input type="text" id="id_paciente">
+
+                    <label for="sintoma">Detalhes e sintomas</label>
+                    <textarea id="sintoma" cols="30" rows="10"></textarea>
+
+                    <label for="funcionario">Responsável pelo tratamento</label>
+                    <select name="funcionarios" id="funcionario">
+                        <option value="Manoel">Dr. Manoel</option>
+                        <option value="Juca">Dr. Juca</option>
+                        <option value="Jaime">Dr. Jaime</option>
+                    </select>
+
+                    <label for="inicio_tratamento">Início do tratamento</label>
+                    <input type="date" id="inicio_tratamento">
+
+                    <label for="final_tratamento">Estimativa de término do tratamento</label>
+                    <input type="date" id="final_tratamento">
+
+                    <button type="button" onclick="alert('Dados enviados com sucesso')">Enviar</button>
+                    <input type="reset">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
